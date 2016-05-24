@@ -120,39 +120,40 @@ html,body{
 
 body{
 	font-family: @aller-regular;
-	color: rgba(0,0,0,0.6);
+	color: rgba(0,0,0,0.5);
 }
 
 
 nav{
 	height: 70px;
-	border-bottom: 1px solid @color-main;
+	/*border-bottom: 1px solid @color-main;*/
 	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
 	z-index: 1030;
 	background: rgba(255,255,255,1);
+	    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 0px 2px 2px rgba(0, 0, 0, 0.098), 0px 0px 5px 1px rgba(0, 0, 0, 0.084);
 }
 
 /* LISTA NAV */
 
 
-		.ma__cont-nav{
+		.cont-nav{
 			position: absolute;
 			top: 0;
 			left: 0;
 			right: 0;
 		}
 
-		ul.ma__ul{
+		ul.ul{
 			list-style: none;
 			padding-left:0px; 
 			text-transform: capitalize;
 			width: 100%;
 		}
 
-		li.ma__li{
+		li.li{
 			text-align: center;
 			font-size: 17px !important;
 			font-family: @aller-bold;
@@ -161,39 +162,39 @@ nav{
 			min-width: 170px;
 		}
 		
-		a.ma__a-nav{
+		a.a-nav{
 			text-decoration: none;
-			color: rgba(0,0,0,1);
+			color: rgba(0,0,0,0.6) !important;
 		}
 
-		ul.ma__ul-inner{
+		ul.ul-inner{
 			overflow: hidden;
 			max-height: 0px;
 			padding-left:0px; 
 			.mixin-transition-all();
 			opacity: 0;
-			text-transform: uppercase;
+			text-transform: capitalize;
 		}
 
-		li.ma__li-inner{
+		li.li-inner{
 			text-align: left;
-			font-size: 13.369552px !important;
+			font-size: 15px !important;
 			padding: 0.8em 1.5em;
 			overflow: hidden;
 			opacity: 0.8;
 		}
 
-		li.ma__li-inner:hover{
+		li.li-inner:hover{
 			background: #eee;
 		}
 
-		li.ma__li > ul.ma__ul-inner{
+		li.li > ul.ul-inner{
 			display: block;
 			list-style: none;
 		}
 
-		li.ma__li:hover > ul.ma__ul-inner{
-			margin-top: 0.8em;
+		li.li:hover > ul.ul-inner{
+			margin-top: 1.3em;
 			padding: 1em 0em;
 			overflow: hidden;
 			max-height: 600px;
@@ -209,7 +210,7 @@ nav{
 
 h1,h2,h3{ color: @color-main; font-family: @aller-bold}
 
-h1{font-size: 30px;}
+h1{font-size: 36px;letter-spacing: -1px;font-family: @aller-light;}
 
 h1:first-letter{text-transform: uppercase;}
 h2:first-letter{text-transform: uppercase;}
@@ -250,3 +251,40 @@ a:visited {
     color: @color-main - 15;
 }
 
+
+/* titles revolution slider */
+
+.revolution-style-custom-2{
+	color: rgba(255,255,255,0.8);
+	font-size: 40px;
+	font-family: @aller-bold-italic;
+	
+}
+
+
+.revolution-style-custom-1{
+	font-family: @aller-regular;
+	font-size: 20px;
+	color: rgba(255,255,255,0.6);
+}
+
+.btn-revolution-slider{
+	border: 2px solid rgba(255,255,255,0.7);
+	padding: 0.7em 1.3em;
+	color: rgba(255,255,255,0.8) !important;
+	font-size: 16px !important; 
+}
+
+
+/**/
+
+.section1{
+	padding: 3em;
+	min-height: 345px;
+	background: #f8f8f8;
+}
+
+.section2{
+	min-height: 450px;
+	border: 1px solid red;
+}

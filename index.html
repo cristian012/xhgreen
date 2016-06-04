@@ -22,6 +22,30 @@
 
 		<link rel="stylesheet" type="text/css" href="lib/revolution_slider/examples&source/rs-plugin/css/settings.css">
 
+		 <!-- load and instantiate ScrollReveal first -->
+		<script type="text/javascript" src="lib/bower_components/scrollreveal/dist/scrollreveal.min.js"></script>
+
+		<script>
+
+			window.sr = ScrollReveal();
+
+			// Add class to <html> if ScrollReveal is supported
+			if (sr.isSupported()) {
+				document.documentElement.classList.add('sr');
+			}
+
+		</script>
+
+		<style>
+
+		  /* Ensure elements load hidden before ScrollReveal runs */
+		  .sr .reveal-top { visibility: hidden; }
+		  .sr .reveal-bottom { visibility: hidden; }
+		  .sr .reveal-left { visibility: hidden; }
+		  .sr .reveal-right { visibility: hidden; }
+
+		</style>
+
 		<!-- Importación de depencdencias de estilos -->
 
 		<link rel="stylesheet" type="text/css" href="css/grid_flex.css">
@@ -39,25 +63,48 @@
 
 			<div class="flex-lg-10"></div>
 
-			<div class="flex-lg-80 layout-row justify-space-between align-start">
+			<div class="flex-lg-80 layout-row justify-space-between align-center">
 				
 
 				<div class="flex-lg-20">
 
-					<img src="img/logo-main.svg" style="width:160px;">
+					<a href="index.html">
+						
+						<img src="img/logo-main.svg" style="width:160px;">
+
+					</a>
+
 
 				</div>
 
-				<div class="flex-lg-50" style="position: relative;">
+				<div class="flex-lg-70 layout-row justify-end" style="position: relative;">
 					
-					<div class="cont-nav layout-row layout-wrap justify-end">
+					<div class="flex-lg-70 cont-nav layout-row layout-wrap justify-end">
 										
 								
 							<ul class="ul layout-row layout-row justify-end align-start">
 
+								<!-- Item del Nav -->
+								<div class="flex-lg-25">
+
+									<li class="li"><a class="a-nav text-white" href="#">proyectos</a>
+
+										<ul class="ul-inner">
+
+											<li class="li-inner"><a class="a-nav" href="#">category 1</a></li>
+
+											<li class="li-inner"><a class="a-nav" href="#">category 2</a></li>
+
+											<li class="li-inner"><a class="a-nav" href="#">category 3</a></li>
+
+										</ul>
+
+									</li>
+
+								</div>
 								
 								<!-- Item del Nav -->
-								<div class="flex-lg-30 flex-md-30 flex-sm-30">
+								<div class="flex-lg-25">
 
 									<li class="li"><a class="a-nav text-white" href="#">Nosotros</a>
 
@@ -77,40 +124,21 @@
 								</div>
 
 
-								<!-- Item del Nav -->
-								<div class="flex-lg-30 flex-md-30 flex-sm-30">
-
-									<li class="li"><a class="a-nav text-white" href="#">Emprendedores</a>
-
-										<ul class="ul-inner">
-
-											<li class="li-inner"><a class="a-nav" href="#">category 1</a></li>
-
-											<li class="li-inner"><a class="a-nav" href="#">category 2</a></li>
-
-											<li class="li-inner"><a class="a-nav" href="#">category 3</a></li>
-
-										</ul>
-
-									</li>
-
-								</div>
 
 								<!-- Item del Nav -->
-								<div class="flex-lg-30 flex-md-30 flex-sm-30">
+								<div class="flex-lg-25">
 
 									<li class="li"><a class="a-nav text-white" href="#">Noticias</a></li>
 
 								</div>
 
-								<!-- Item del Nav -->
-								<div class="flex-lg-25 flex-md-25 flex-sm-25" style="background: rgb(255, 124, 31);border-radius: 33px;">
-
-									<li class="li"><a style="color: white !important;" class="a-nav text-white" href="#">Anotar mi idea</a></li>
-
-								</div>
 
 							</ul>
+					</div>
+
+					<!-- Contenedor de boton -->
+					<div class="flex-lg-20 layout-row aling-center justify-center">
+						<button class="btn-orange-main">Anotar mi idea</button>
 					</div>
 				</div>
 			</div>
@@ -269,16 +297,15 @@
 
 
 		<!-- SECTION 2 - QUIENES SOMOS (DESCRIPCIÓN BREVE) -->
-
 		<section class="section1 layout-row layout-wrap">
 
 			<div class="flex-lg-20"></div>
 
-			<div class="flex-lg-60 text-center">
+			<div class="flex-lg-60 text-center fooContainecr">
 
-				<h1 >¿ Quienes somos ?</h1>
+				<h1 class="reveal-bottom">¿ Quienes somos ?</h1>
 
-				<p style="font-size:19px;">
+				<p class="reveal-bottom" style="font-size:19px;">
 
 					Sed ut perspiciatis unde omnis iste natus <span class="text-bold">error sit voluptatem accusantium</span> doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo sit voluptatem accusantium doloremque.
 
@@ -291,7 +318,37 @@
 		</section>
 
 
-
+		<section class="layout-row" style="margin-top:8em;margin-bottom:7em;">
+		
+			<div class="flex-lg-10"></div>
+			
+			<div class="flex-lg-80 layout-row justify-space-between">
+			
+				
+				<div class="flex-lg-45 reveal-left">
+				
+					<h1>título primer nivel</h1>
+					
+					
+					<p>Sed ut perspiciatis unde omnis iste natus <span class="text-bold">error sit voluptatem accusantium</span> doloremque laudantium, totam 
+					rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+				
+					
+					<br><br>
+					<div>
+					
+						<a href="#">Link de acceso a información</a>
+						
+					</div>
+					
+				</div>
+				
+				<div class="flex-lg-45 reveal-right" style="background:#eee;">
+					<img src="http://lapostanoticias.com.uy/inicio/wp-content/uploads/2015/07/ddd.jpg" style="width:100%;">
+				</div>
+			</div>
+			<div class="flex-lg-10"></div>
+		</section>
 
 
 
@@ -319,169 +376,89 @@
 
 			<div class="flex-lg-10"></div>
 
-			<div class="flex-lg-80 layout-row justify-space-between layout-wrap" style="border: 1px solid red;">
+			<div class="flex-lg-80 layout-row justify-space-between layout-wrap">
 
-				<div class="flex-lg-30 layout-wrap" style="border: 1px solid red;">
-
-					<div class="flex-lg-100 layout-row justify-center">
-						<div class="cont-circle-icono"></div>
-					</div>
+				<div class="flex-lg-30 layout-wrap layout-row justify-center align-center">
 					
-				</div>
-
-				<div class="flex-lg-30 layout-wrap" style="border: 1px solid red;">
-
-					<div class="flex-lg-100 layout-row justify-center">
-						<div class="cont-circle-icono"></div>
-					</div>
-					
-				</div>
-
-				<div class="flex-lg-30 layout-wrap" style="border: 1px solid red;">
-
-					<div class="flex-lg-100 layout-row justify-center">
-						<div class="cont-circle-icono"></div>
-					</div>
-					
-				</div>
-
-			</div>
-
-			<div class="flex-lg-10"></div>
-		</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		<section class="layout-row" style="margin-top:8em;margin-bottom:5em;">
-		
-			<div class="flex-lg-10"></div>
-			
-			<div class="flex-lg-80 layout-row justify-space-between">
-			
-				
-				<div class="flex-lg-45">
-				
-					<h1>título primer nivel</h1>
-					
-					
-					<p>Sed ut perspiciatis unde omnis iste natus <span class="text-bold">error sit voluptatem accusantium</span> doloremque laudantium, totam 
-					rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-					
-
-					<label>Meta Text</label>
-					
-					<span class="meta-text">sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</span>
-					
-					<br><br>
 					<div>
-					
-						<a href="#">Link de acceso a información</a>
 						
+						<div class="layout-row justify-center">
+							<div class="cont-circle-icono"></div>
+						</div>
+
+						<div>
+							<p>
+								Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.
+							</p>
+						</div>
+
+						<div>
+							<a href="#">Link de acceso a información</a>
+						</div>
+
 					</div>
 					
 				</div>
-				
-				<div class="flex-lg-45" style="background:#eee;">
-				
-					
-				</div>
-			</div>
-			<div class="flex-lg-10"></div>
-		</section>
 
+				<div class="flex-lg-30 layout-wrap layout-row justify-center align-center">
 
-		<section class="layout-row" style="margin-top:8em;margin-bottom:5em;">
-		
-			<div class="flex-lg-10"></div>
-			
-			<div class="flex-lg-80 layout-row justify-space-between">
-			
-				
-				<div class="flex-lg-45">
-				
-					<h1>título primer nivel</h1>
-					
-					
-					<p>Sed ut perspiciatis unde omnis iste natus <span class="text-bold">error sit voluptatem accusantium</span> doloremque laudantium, totam 
-					rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-					
-
-					<label>Meta Text</label>
-					
-					<span class="meta-text">sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</span>
-					
-					<br><br>
 					<div>
-					
-						<a href="#">Link de acceso a información</a>
 						
+						<div class="layout-row justify-center">
+							<div class="cont-circle-icono"></div>
+						</div>
+
+						<div>
+							<p>
+								Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.
+							</p>
+						</div>
+
+						<div>
+							<a href="#">Link de acceso a información</a>
+						</div>
+
 					</div>
 					
 				</div>
-				
-				<div class="flex-lg-45" style="background:#eee;">
-				
-					
-				</div>
-			</div>
-			<div class="flex-lg-10"></div>
-		</section>
 
+				<div class="flex-lg-30 layout-wrap layout-row justify-center align-center">
 
-		<section class="layout-row" style="margin-top:8em;margin-bottom:5em;">
-		
-			<div class="flex-lg-10"></div>
-			
-			<div class="flex-lg-80 layout-row justify-space-between">
-			
-				
-				<div class="flex-lg-45">
-				
-					<h1>título primer nivel</h1>
-					
-					
-					<p>Sed ut perspiciatis unde omnis iste natus <span class="text-bold">error sit voluptatem accusantium</span> doloremque laudantium, totam 
-					rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-					
-
-					<label>Meta Text</label>
-					
-					<span class="meta-text">sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</span>
-					
-					<br><br>
 					<div>
-					
-						<a href="#">Link de acceso a información</a>
-						
+		
+						<div class="layout-row justify-center">
+							<div class="cont-circle-icono"></div>
+						</div>
+
+						<div>
+							<p>
+								Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.
+							</p>
+						</div>
+
+						<div>
+							<a href="#">Link de acceso a información</a>
+						</div>
 					</div>
 					
 				</div>
-				
-				<div class="flex-lg-45" style="background:#eee;">
-				
-					
-				</div>
+
 			</div>
+
 			<div class="flex-lg-10"></div>
 		</section>
+
+
+
+
+
+		<footer></footer>
 
 		<script type="text/javascript" src="js/main.js"></script>
+
+		<script>
+			
+		</script>
+
 	</body>
 </html>

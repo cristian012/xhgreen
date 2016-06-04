@@ -87,3 +87,10 @@
 						shadow:0
 		 		});
 	});
+
+
+
+	sr.reveal('.reveal-top', {  origin: 'top', reset: 'true', distance: '100px', duration: '1500'}, 500);
+	sr.reveal('.reveal-bottom', {  origin: 'bottom', reset: 'true', distance: '100px', duration: '1500'}, 500);
+	sr.reveal('.reveal-left', {  origin: 'left', reset: 'true', distance: '100px', duration: '1500'}, 500);
+	sr.reveal('.reveal-right', {  origin: 'right', reset: 'true', distance: '100px', duration: '1500'}, 500);

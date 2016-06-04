@@ -120,12 +120,12 @@
 
 	body{
 		font-family: @aller-regular;
-		color: rgba(0,0,0,0.5);
+		color: rgba(0,0,0,0.7);
 	}
 
 
 	nav{
-		height: 70px;
+		height: 60px;
 		/*border-bottom: 1px solid @color-main;*/
 		position: fixed;
 		top: 0;
@@ -140,10 +140,7 @@
 
 
 		.cont-nav{
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
+		
 		}
 
 		ul.ul{
@@ -151,6 +148,7 @@
 			padding-left:0px; 
 			text-transform: capitalize;
 			width: 100%;
+			margin: 0;
 		}
 
 		li.li{
@@ -159,7 +157,7 @@
 			font-family: @aller-bold;
 			padding: 0.5em 0em;
 			overflow: hidden;
-			min-width: 170px;
+			cursor: pointer;
 		}
 		
 		a.a-nav{
@@ -174,6 +172,8 @@
 			.mixin-transition-all();
 			opacity: 0;
 			text-transform: capitalize;
+			position: absolute;
+			width: 180px;
 		}
 
 		li.li-inner{
@@ -210,7 +210,7 @@
 
 	h1,h2,h3{ color: @color-main; font-family: @aller-bold}
 
-	h1{font-size: 36px;letter-spacing: -1px;font-family: @aller-light;}
+	h1{font-size: 36px;letter-spacing: -2px;font-family: @aller-light;}
 
 	h1:first-letter{text-transform: uppercase;}
 	h2:first-letter{text-transform: uppercase;}
@@ -286,13 +286,30 @@
 
 	.section2{
 		min-height: 450px;
-		border: 1px solid red;
 	}
 
 
 	.cont-circle-icono{
-		width: 100px;
-		height: 100px;
+		width: 80px;
+		height: 80px;
 		border-radius: 10em;
 		background: @color-main;
+	}
+
+	.btn-orange-main{
+		border:none;
+		background-color: orange;
+		font-family: @aller-bold;
+		border-radius: 10em;
+		color: rgb(255,255,255);
+		height: 40px;
+		font-size:16px;
+		padding: 0.5em 1em;
+		.mixin-transition-all();
+		cursor: pointer;
+		outline:none;
+	}
+
+	.btn-orange-main:active{
+		background-color: #e59304
 	}

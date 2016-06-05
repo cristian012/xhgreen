@@ -107,7 +107,9 @@
 
 /* variables de color */
 	
-	@color-main: #50c93e;
+	@color-main: #7DC926;
+	@color-orange: #FF9200;
+	@color-yellow: #FFE000;
 
 /* Reset document */
 
@@ -235,6 +237,7 @@
 	span.text-bold{ font-family: @aller-bold }
 	p{line-height: 1.6em;}
 	p:first-letter{text-transform: uppercase;}
+	.text-white{color: white;}
 	span.meta-text{font-size: 13px; color: rgba(0,0,0,0.45);}
 
 	/* links */
@@ -305,12 +308,15 @@
 
 	.mod-call-to-action{
 		height: 250px;
-		border: 1px solid red;
+		background-image: url('../img/bg1.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: 0em -15em
 	}
 
 	.btn-orange-main{
 		border:none;
-		background-color: orange;
+		background-color: @color-orange;
 		font-family: @aller-bold;
 		border-radius: 10em;
 		color: rgb(255,255,255);
@@ -328,10 +334,11 @@
 
 	.btn-white{
 		text-decoration: none;
-		border: 2px solid @color-main;
+		border: 2px solid @color-orange;
 		padding: 0.7em 1.5em;
-		color: @color-main;
+		color: @color-orange !important;
 		border-radius: 10em;
+		font-family: @aller-bold;
 	}
 
 	.btn-color{

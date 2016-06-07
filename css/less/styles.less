@@ -237,7 +237,7 @@
 	span.text-bold{ font-family: @aller-bold }
 	p{line-height: 1.6em;}
 	p:first-letter{text-transform: uppercase;}
-	.text-white{color: white;}
+	.text-white{color: white !important;}
 	span.meta-text{font-size: 13px; color: rgba(0,0,0,0.45);}
 
 	/* links */
@@ -319,7 +319,7 @@
 		background-color: @color-orange;
 		font-family: @aller-bold;
 		border-radius: 10em;
-		color: rgb(255,255,255);
+		color: rgb(255,255,255) !important;
 		height: 40px;
 		font-size:16px;
 		padding: 0.5em 1em;
@@ -343,8 +343,48 @@
 
 	.btn-color{
 		text-decoration: none;
-		padding: 0.7em 1.5em;
+		padding: 1em 1.5em;
 		color: white !important;
 		background-color: @color-main;
 		border-radius: 10em;
+	}
+
+	input[type="text"]{
+		background: transparent;
+		padding: 0.7em 1.2em;
+		font-family: @aller-regular;
+		color: rgba(0,0,0,0.7);
+		font-size: 17px;
+		outline: none;
+		border:2px solid #eee;
+		width: 92%;
+		border-radius: 5em;
+		.mixin-transition-all(1s);
+		text-transform: capitalize;
+	}
+
+	input[type="text"]:focus{
+		border:2px solid @color-main;
+	}
+
+	input[type="text"]:first-letter{
+		text-transform: uppercase;
+	}
+
+	textarea{
+		background: transparent;
+		padding: 0.7em 1.2em;
+		font-family: @aller-light;
+		font-size: 15px;
+		outline: none;
+		border:2px solid #eee;
+		resize:none;
+		width: 92%;
+		border-radius: 1em;
+		.mixin-transition-all(1s);
+		min-height: 80px;
+	}
+
+	textarea:focus{
+		border:2px solid @color-main;
 	}
